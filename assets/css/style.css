@@ -24,13 +24,11 @@ html {
 
 body {
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
 }
 
 
 #general_div_1 {
-    width: 100%;
     background-color: #FFC017;
     padding-bottom: 6.5rem;
     overflow: hidden;
@@ -41,10 +39,28 @@ body {
 
 nav {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #FFC017;
+    padding: 0.7rem 0rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 111;
+    border-bottom: 1px solid black;
+    transition: all 0.3s;
+}
+
+nav.scrolled {
+    background-color: white;
+}
+
+#nav_div {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFC017;
-    padding: 0.7rem 10rem;
+    width: 80%;
 }
 
 nav a {
@@ -66,6 +82,10 @@ hr {
     border-top: 1px solid rgb(0, 0, 0);
 }
 
+.separate_nav {
+    padding: 1rem;
+}
+
 .separate {
     margin-bottom: 2rem;
 }
@@ -82,7 +102,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0 10rem;
-
+    padding-top: 70px;
 }
 
 header h1 {
@@ -117,7 +137,7 @@ header a:hover {
 
 #header_right svg {
     position: absolute;
-    right: -40%;
+    right: -39%;
 }
 
 
