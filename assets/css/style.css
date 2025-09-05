@@ -207,7 +207,8 @@ header a:hover {
     display: flex;
     justify-content: space-between;
     padding: 0 10rem;
-    margin-bottom: 7rem;;
+    margin-bottom: 7rem;
+    ;
 }
 
 /* CARDS 2 */
@@ -301,8 +302,58 @@ width: 5%;
 
 /* ASIDE */
 
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.aside_top {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
 aside h3 {
     font-weight: 600;
     margin-bottom: 0.8rem;
 }
 
+aside p {
+    color: gray;
+    border: 2px solid rgb(214, 214, 214);
+    border-radius: 3px;
+    padding: 0.5rem;
+    margin: 0.3rem;
+    transition: all 0.3s;
+}
+
+aside p:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(151, 151, 151);
+    border: 2px solid rgb(151, 151, 151);
+}
+
+#separate_gray_aside {
+    margin: 2rem 0;
+}
+
+.aside_bottom {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.aside_bottom a {
+    color: gray;
+    padding: 0 0.5rem 0.5rem 0;
+    margin: 0 0.3rem 0.3rem 0;
+    transition: all 0.3s;
+}
+
+.aside_bottom a:hover {
+    color: black;
+}
