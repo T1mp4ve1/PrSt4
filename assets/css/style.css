@@ -52,8 +52,12 @@ nav {
     transition: all 0.3s;
 }
 
-nav.scrolled {
+.scrolled {
     background-color: white;
+}
+
+.scrolled_a:hover {
+    background-color: #1A8917;
 }
 
 #nav_div {
@@ -73,6 +77,10 @@ nav a:hover {
     color: white;
     background-color: black;
 }
+
+/* .nav_selected:hover {
+    background-color: #1A8917;
+} */
 
 
 /* HR */
@@ -136,8 +144,11 @@ header a:hover {
 }
 
 #header_right svg {
+    min-height: 500px;
+    min-width: 600px;
     position: absolute;
-    right: -39%;
+    top: -10%;
+    right: -40%;
 }
 
 
