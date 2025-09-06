@@ -557,6 +557,10 @@ aside p:hover {
 
 /* SOLDI 4 */
 
+#soldi_4 {
+    position: relative;
+}
+
 #soldi_4 p:hover {
     background-color: rgb(246, 2, 2);
 }
@@ -591,19 +595,23 @@ aside p:hover {
 
 #nano {
     text-align: end;
+    position: absolute;
+    top: 110px;
+    /* right: -170px; */
+    right: 30px;
 }
 
 #nano h5 {
-    text-align: end;
-    color: white;
-    transition: all 0.5s;
+    /* visibility: hidden; */
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     font-family: "Story Script", sans-serif;
-    line-height: 0.3;
-    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s;
 }
 
-#soldi_4:hover+#nano h5 {
-    transform: translateX(0px);
-    color: red;
+#soldi_4:hover #nano h5 {
+    transition: all 8s;
+    color: white;
+    opacity: 1;
 }
