@@ -1,5 +1,5 @@
 const nav_buttons = document.querySelectorAll('#sing_in a');
-console.log(nav_buttons);
+// console.log(nav_buttons);
 
 window.addEventListener("scroll", function () {
   const nav = document.querySelector("nav");

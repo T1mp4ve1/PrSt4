@@ -35,6 +35,8 @@ body {
 }
 
 
+/* GENRAL DIV 1 */
+
 /* NAV */
 
 nav {
@@ -49,7 +51,7 @@ nav {
     width: 100%;
     z-index: 111;
     border-bottom: 1px solid black;
-    transition: all 0.3s;
+    transition: all 1s;
 }
 
 .scrolled {
@@ -70,17 +72,13 @@ nav {
 nav a {
     padding: 0.5rem 1rem;
     border-radius: 50px;
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 
 nav a:hover {
     color: white;
     background-color: black;
 }
-
-/* .nav_selected:hover {
-    background-color: #1A8917;
-} */
 
 
 /* HR */
@@ -131,7 +129,7 @@ header a {
     border-radius: 50px;
     color: white;
     background-color: black;
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 
 header a:hover {
@@ -165,6 +163,7 @@ header a:hover {
 #trending {
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 #trending p {
@@ -180,32 +179,52 @@ header a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 2rem;
+    gap: 2rem;
 }
 
 .card {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
-    margin: 1rem 7rem 2rem 0rem;
+    /* flex-wrap: wrap; */
+    width: 420px;
+    padding: 1rem 0rem 2rem 0rem;
+    border: 1px solid rgba(229, 229, 229, 0);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.in {
+    color: gray;
+}
+
+.card:hover {
+    box-shadow: 0px -3px 0px #FFC017, 0px 3px 0px #FFC017;
 }
 
 .card img {
-    width: 10%;
-    border-radius: 50%;
+    /* width: 10%; */
+    width: 25px;
+    border-radius: 20%;
 }
 
 .card_left {
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 
 .card_left p {
     color: rgba(0, 0, 0, 0.275);
     font-size: 3rem;
     font-weight: 600;
+    transition: all 0.3s;
+}
+
+.card:hover .card_left p {
+    color: black;
 }
 
 .card_right {
-    margin-top: 0.6rem;
+    margin-top: 1rem;
 }
 
 .card_right_top {
@@ -247,18 +266,29 @@ header a:hover {
 .cards_2 {
     display: flex;
     flex-direction: column;
+    margin-right: 8rem;
 }
 
 .card_2 {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     margin-top: 4rem;
+    border: 1px solid rgba(128, 128, 128, 0);
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: -2px 0px 0px #1A8917;
+}
+
+.card_2:hover {
+    background: linear-gradient(90deg, rgba(169, 169, 169, 0.114), white);
+    box-shadow: -30px 0px 0px #1A8917;
 }
 
 .card_2_left {
     width: 60%;
     margin-right: 5rem;
+    margin-left: 2rem;
 }
 
 .card_2_left_top {
@@ -267,6 +297,7 @@ header a:hover {
 }
 
 .card_2_left_top p {
+    margin-left: 0.7rem;
     font-weight: 600;
 }
 
@@ -278,9 +309,19 @@ header a:hover {
 
 .description {
     color: gray;
-    margin: 0 0 0.8rem 0;
     font-size: 1.3rem;
 }
+
+.card_2_left h3,
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 0.12rem;
+}
+
 
 .info {
     color: gray;
@@ -295,19 +336,31 @@ header a:hover {
 }
 
 .info span:nth-child(3) {
+    display: inline-block;
+    text-align: center;
     background-color: rgb(235, 235, 235);
     border-radius: 50px;
     padding: 0.2rem 0.7rem;
+    transition: all 0.2s;
+}
+
+.info span:nth-child(3):hover {
+    color: white;
+    background-color: #FFC017;
 }
 
 .card_2_left_bottom {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
 }
 
 .card_2_left_bottom_left {
     display: flex;
-    width: 70%;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
     flex-wrap: nowrap;
 }
 
@@ -315,19 +368,29 @@ header a:hover {
     margin-left: 0.3rem;
 }
 
-/* .book {
-width: 5%;
-} */
-
-
-
 .card_2_left_top img {
     border-radius: 50%;
 }
 
+.book {
+    width: 5%;
+    background-color: rgba(235, 235, 235, 0.136);
+    border-radius: 50%;
+    transition: all 0.2s;
+    cursor: cell;
+}
+
+.book:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.card_2_right {
+    display: flex;
+    justify-content: end;
+}
+
 .card_2_right img {
-    width: 100%;
-    height: 170px;
+    width: 80%;
 }
 
 
@@ -357,14 +420,14 @@ aside p {
     border-radius: 3px;
     padding: 0.5rem;
     margin: 0.3rem;
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 
 aside p:hover {
     cursor: pointer;
     color: rgb(255, 255, 255);
-    background-color: rgb(151, 151, 151);
-    border: 2px solid rgb(151, 151, 151);
+    background-color: #1A8917;
+    border: 2px solid #1A8917;
 }
 
 #separate_gray_aside {
@@ -382,9 +445,165 @@ aside p:hover {
     color: gray;
     padding: 0 0.5rem 0.5rem 0;
     margin: 0 0.3rem 0.3rem 0;
-    transition: all 0.3s;
+    transition: all 0.2s;
+    border-radius: 10px;
 }
 
 .aside_bottom a:hover {
     color: black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.114);
+}
+
+
+/* SOLDI! */
+
+#soldi p,
+#soldi_2 p,
+#soldi_3 p,
+#soldi_4 p {
+    transition: all 0.5s;
+}
+
+
+#soldi,
+#soldi_2,
+#soldi_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#soldi P {
+    border: none;
+    color: white;
+}
+
+#soldi p span:nth-child(1) {
+    line-height: 0.5;
+    font-size: 11rem;
+}
+
+#soldi p span:nth-child(2) {
+    line-height: 0.5;
+    font-size: 4rem;
+}
+
+#soldi p span:nth-child(3) {
+    line-height: 0.6;
+    font-size: 8rem;
+}
+
+#soldi p span:nth-child(4) {
+    line-height: 0.6;
+    font-size: 22rem;
+}
+
+#soldi p span:nth-child(5) {
+    line-height: 0.6;
+    font-size: 11.7rem;
+}
+
+
+/* SOLDI 2 */
+
+#soldi_2 p:hover {
+    background-color: #FFC017;
+}
+
+#soldi_2 P {
+    border: none;
+    color: white;
+}
+
+#soldi_2 p span:nth-child(1) {
+    line-height: 0.5;
+    font-size: 10rem;
+}
+
+#soldi_2 p span:nth-child(2) {
+    line-height: 0.6;
+    font-size: 11.7rem;
+}
+
+
+/* SOLDI 3 */
+
+#soldi_3 p:hover {
+    background-color: black;
+}
+
+#soldi_3 P {
+    border: none;
+    color: white;
+}
+
+#soldi_3 p span:nth-child(1) {
+    line-height: 0.5;
+    font-size: 10rem;
+}
+
+#soldi_3 p span:nth-child(2) {
+    margin-left: 8rem;
+    line-height: 0.15;
+    font-size: 10rem;
+}
+
+#soldi_3 p span:nth-child(3) {
+    line-height: 0.6;
+    font-size: 11.7rem;
+}
+
+
+/* SOLDI 4 */
+
+#soldi_4 p:hover {
+    background-color: rgb(246, 2, 2);
+}
+
+#soldi_4 P {
+    border: none;
+    color: white;
+}
+
+#soldi_4 p span:nth-child(1) {
+    line-height: 0.45;
+    margin-left: -1.3rem;
+    font-size: 5.8rem;
+}
+
+#soldi_4 p span:nth-child(2) {
+    line-height: 0.6;
+    font-size: 10rem;
+}
+
+#soldi_4 p span:nth-child(3) {
+    line-height: 0.6;
+    margin-left: -2rem;
+    font-size: 11.7rem;
+}
+
+#soldi_4 p span:nth-child(4) {
+    line-height: 0.6;
+    margin-left: -2rem;
+    font-size: 13rem;
+}
+
+#nano {
+    text-align: end;
+}
+
+#nano h5 {
+    text-align: end;
+    color: white;
+    transition: all 0.5s;
+    font-size: 1.5rem;
+    font-family: "Story Script", sans-serif;
+    line-height: 0.3;
+    transform: translateY(100px);
+}
+
+#soldi_4:hover+#nano h5 {
+    transform: translateX(0px);
+    color: red;
 }
